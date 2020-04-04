@@ -1,2 +1,6 @@
+com\example\springboot\repositories\CivilianRepo.class
+com\example\springboot\services\CivilianService.class
+com\example\springboot\controller\HelloController.class
 com\example\springboot\Application.class
-com\example\springboot\HelloController.class
+com\example\springboot\controller\CivilianController.class
+com\example\springboot\model\Civilian.class
