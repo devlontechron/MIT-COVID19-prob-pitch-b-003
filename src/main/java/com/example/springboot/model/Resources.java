@@ -2,43 +2,34 @@ package com.example.springboot.model;
 
 public class Resources {
 
-    int masks;
-    int icuBeds;
-    int beds;
-    int PPE;
+    int testKits;
+    int testPerDayRate;
+    int testBacklog;
 
     //how can we make this dynamic?
 
 
-    public int getMasks() {
-        return masks;
+    public int getTestKits() {
+        return testKits;
     }
 
-    public void setMasks(int masks) {
-        this.masks = masks;
+    public void setTestKits(int testKits) {
+        this.testKits = testKits;
     }
 
-    public int getIcuBeds() {
-        return icuBeds;
+    public int getTestPerDayRate() {
+        return testPerDayRate;
     }
 
-    public void setIcuBeds(int icuBeds) {
-        this.icuBeds = icuBeds;
+    public void setTestPerDayRate(int testPerDayRate) {
+        this.testPerDayRate = testPerDayRate;
     }
 
-    public int getBeds() {
-        return beds;
+    public int getTestBacklog() {
+        return testBacklog;
     }
 
-    public void setBeds(int beds) {
-        this.beds = beds;
-    }
-
-    public int getPPE() {
-        return PPE;
-    }
-
-    public void setPPE(int PPE) {
-        this.PPE = PPE;
+    public void setTestBacklog(int testBacklog) {
+        this.testBacklog = testBacklog;
     }
 }
