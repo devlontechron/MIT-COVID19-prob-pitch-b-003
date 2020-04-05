@@ -14,4 +14,5 @@ com\example\springboot\Application.class
 com\example\springboot\model\Resources.class
 com\example\springboot\controller\OrganizationController.class
 com\example\springboot\repositories\TestDataRepo.class
+com\example\springboot\config\SwaggerConfig.class
 com\example\springboot\controller\TestDataController.class
