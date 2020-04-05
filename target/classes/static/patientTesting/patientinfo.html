@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="patientinfo.css">
+    <!--  jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <script>
+      $(document).ready(function(){
+        var date_input=$('input[name="date"]'); //our date input has the name "date"
+        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+        var options={
+          format: 'mm/dd/yyyy',
+          container: container,
+          todayHighlight: true,
+          autoclose: true,
+        };
+        date_input.datepicker(options);
+      })
+  </script>
+
+  </head>
+<body>
+    
+    <div class="container mt-5">
+      <div class="bootstrap-iso">
+      <div class="container-fluid">
+        <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 mt-5">
+        <h2>Patient Info</h2>
+
+            <form class="mt-5"> 
+              <div class="form-group">
+                <label for="exampleInputEmail1">ID</label>
+                <input type="text" class="form-control" id="PatientID" aria-describedby="emailHelp" placeholder="ID">
+              </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Age</label>
+                  <input type="number" class="form-control" id="PatientAge" aria-describedby="emailHelp" placeholder="Age">
+                </div>
+                <div class="form-group">
+                  <label for="sex">Sex</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>Female</option>
+                    <option>Male</option>
+                    <option>Others</option>
+                  </select>
+                </div>
+                <div class="form-check">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Race</label>
+                  <input type="text" class="form-control" id="Race" aria-describedby="emailHelp" placeholder="Race">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Weight</label>
+                  <input type="number" class="form-control" id="Weight" aria-describedby="emailHelp" placeholder="Weight in kgs">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Weight</label>
+                  <input type="number" class="form-control" id="Height" aria-describedby="emailHelp" placeholder="Height in cms">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Zip code</label>
+                  <input type="text" class="form-control" id="PatientAge" aria-describedby="emailHelp" placeholder="Zip code">
+                </div>
+                <div class="form-group"> <!-- Date input -->
+                  <label class="control-label" for="date">Date</label>
+                  <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label" for="date">Symptoms</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Fever
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                  <label class="form-check-label" for="defaultCheck2">
+                    Cough
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                  <label class="form-check-label" for="defaultCheck2">
+                    Breathing problem
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                  <label class="form-check-label" for="defaultCheck2">
+                    Body ache
+                  </label>
+                </div>
+              </br>
+                <div class="form-group">
+                <label class="control-label" for="date">Pre-existing conditions</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                  <label class="form-check-label" for="exampleRadios1">
+                    Yes
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                  <label class="form-check-label" for="exampleRadios2">
+                    No
+                  </label>
+                </br>
+                </br>
+                <button type="submit" class="btn btn-primary btn-block" id="bottom">Submit</button>
+              </form>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>

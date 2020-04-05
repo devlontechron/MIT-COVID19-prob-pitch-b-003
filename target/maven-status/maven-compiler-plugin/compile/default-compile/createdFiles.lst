@@ -6,7 +6,6 @@ com\example\springboot\services\CivilianService.class
 com\example\springboot\repositories\OrgRepo.class
 com\example\springboot\services\TestDataService.class
 com\example\springboot\repositories\CivilianRepo.class
-com\example\springboot\config\SQLConfig.class
 com\example\springboot\model\NewOrgRequest.class
 com\example\springboot\model\Organizations.class
 com\example\springboot\services\OrgService.class
