@@ -13,10 +13,11 @@ public class OrgService {
     OrgRepo orgRepo;
 
     public void getAllOrgNames() {
+        orgRepo.findAll();
     }
 
     public Organizations newOrgOnboarding(NewOrgRequest nor){
         Organizations newOrg = new Organizations();
-        return orgRepo.insertNewOrg(newOrg);
+        return orgRepo.save(newOrg);
     }
 }

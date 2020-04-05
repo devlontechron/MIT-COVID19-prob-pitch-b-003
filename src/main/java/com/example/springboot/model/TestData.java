@@ -1,8 +1,13 @@
 package com.example.springboot.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.util.Date;
 
+@Entity
 public class TestData {
+    @Id
     String id;
     Date createdDate;
     String status;
@@ -11,6 +16,7 @@ public class TestData {
     String organization;
     String notes;
     String rank;
+    @Transient
     HealthCareWorker lastHCW;
     String Log;
     String turnAroundTime;

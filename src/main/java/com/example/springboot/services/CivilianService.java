@@ -1,6 +1,8 @@
 package com.example.springboot.services;
 
 import com.example.springboot.model.Civilian;
+import com.example.springboot.repositories.CivilianRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,10 +10,11 @@ import java.util.List;
 @Service
 public class CivilianService {
 
-    public List<Civilian> getAllCivilianData(){
-        //hit repo
+    @Autowired
+    CivilianRepo civRepo;
 
-        return null;
+    public List<Civilian> getAllCivilianData(){
+        return (List<Civilian>) civRepo.findAll();
     }
 
     public List<Civilian> getCivilianBy(){
@@ -20,10 +23,7 @@ public class CivilianService {
     }
 
     public Civilian onboardCivilian(Civilian newPatient){
-        //abstract information to keep hippa laws?
-
-        //repo.insert()
-        //return HTTP 200
+        civRepo.save(newPatient);
         return null;
     }
 }

@@ -37,7 +37,7 @@ public class CivilianController {
     }
 
     @PostMapping(value = "/new")
-    public ResponseEntity<Civilian> getCivilianById(@RequestBody Civilian newCiv) {
+    public ResponseEntity<Civilian> onboardNew(@RequestBody Civilian newCiv) {
         Civilian addedCiv = civServ.onboardCivilian(newCiv);
         return new ResponseEntity<Civilian>(addedCiv, HttpStatus.OK);
     }

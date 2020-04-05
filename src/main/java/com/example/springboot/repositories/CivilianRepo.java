@@ -1,10 +1,10 @@
 package com.example.springboot.repositories;
 
 import com.example.springboot.model.Civilian;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public class CivilianRepo {
+@Repository
+public interface CivilianRepo extends CrudRepository<Civilian, Integer> {
 
-    public Civilian insertNewCiv(Civilian newCiv){
-        return null;
-    }
 }

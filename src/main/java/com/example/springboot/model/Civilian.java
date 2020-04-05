@@ -1,21 +1,26 @@
 package com.example.springboot.model;
 
+
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Date;
 import java.util.Set;
 
+@Entity
 public class Civilian {
+    @Id
     String id;
     int age;
     String gender;
     String race;
     //metric system please!
-    double weight;
+    int weight;
     String location;
     Date created;
     Date lastUpdated;
-    Set<String> conditions;
-    Boolean hasPreExisitingCondition;
-    Set<String> symptoms;
+    //Set<String> conditions;
+    //Set<String> symptoms;
 
     public String getId() {
         return id;
@@ -49,13 +54,6 @@ public class Civilian {
         this.race = race;
     }
 
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
 
     public String getLocation() {
         return location;
@@ -81,27 +79,7 @@ public class Civilian {
         this.lastUpdated = lastUpdated;
     }
 
-    public Set<String> getConditions() {
-        return conditions;
-    }
 
-    public void setConditions(Set<String> conditions) {
-        this.conditions = conditions;
-    }
 
-    public Boolean getHasPreExisitingCondition() {
-        return hasPreExisitingCondition;
-    }
 
-    public void setHasPreExisitingCondition(Boolean hasPreExisitingCondition) {
-        this.hasPreExisitingCondition = hasPreExisitingCondition;
-    }
-
-    public Set<String> getSymptoms() {
-        return symptoms;
-    }
-
-    public void setSymptoms(Set<String> symptoms) {
-        this.symptoms = symptoms;
-    }
 }

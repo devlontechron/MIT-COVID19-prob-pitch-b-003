@@ -1,11 +1,18 @@
 package com.example.springboot.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.util.List;
 
+@Entity
 public class Organizations {
+    @Id
     String orgName;
     String admin;
+    @Transient
     Resources metrics;
+    @Transient
     List<HealthCareWorker> HCW;
 
     public String getOrgName() {
