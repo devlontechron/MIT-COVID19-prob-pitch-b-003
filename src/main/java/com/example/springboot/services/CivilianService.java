@@ -19,7 +19,7 @@ public class CivilianService {
         return null;
     }
 
-    public List<Civilian> onboardCivilian(Civilian newPatient){
+    public Civilian onboardCivilian(Civilian newPatient){
         //abstract information to keep hippa laws?
 
         //repo.insert()

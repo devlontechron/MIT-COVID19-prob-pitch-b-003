@@ -19,7 +19,7 @@ public class CivilianController {
     CivilianService civServ;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String getExample(@PathVariable("ID") String Id) {
+    public String getExample() {
         //go to service class and pass in ID and return results
         return "Greetings from Spring Boot!";
     }
@@ -36,4 +36,9 @@ public class CivilianController {
         return "Greetings from Spring Boot!";
     }
 
+    @PostMapping(value = "/new")
+    public ResponseEntity<Civilian> getCivilianById(@RequestBody Civilian newCiv) {
+        Civilian addedCiv = civServ.onboardCivilian(newCiv);
+        return new ResponseEntity<Civilian>(addedCiv, HttpStatus.OK);
+    }
 }
