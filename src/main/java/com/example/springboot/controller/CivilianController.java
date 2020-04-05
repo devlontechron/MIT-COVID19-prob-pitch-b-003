@@ -1,6 +1,7 @@
 package com.example.springboot.controller;
 
 import com.example.springboot.model.Civilian;
+import com.example.springboot.model.TestData;
 import com.example.springboot.services.CivilianService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
@@ -30,15 +31,14 @@ public class CivilianController {
         return new ResponseEntity<List<Civilian>>(allCivs, HttpStatus.OK);
     }
 
-    @PostMapping(value = "/{ID}")
-    public String getCivilianById(@PathVariable("ID") String Id) {
-        //go to service class and pass in ID and return results
-        return "Greetings from Spring Boot!";
+    @GetMapping(value = "/{ID}")
+    public ResponseEntity<Civilian> getCivilianById(@PathVariable("ID") String Id) {
+        return new ResponseEntity<Civilian>(civServ.getCivilianByID(Id), HttpStatus.OK);
     }
 
     @PostMapping(value = "/new")
-    public ResponseEntity<Civilian> onboardNew(@RequestBody Civilian newCiv) {
-        Civilian addedCiv = civServ.onboardCivilian(newCiv);
-        return new ResponseEntity<Civilian>(addedCiv, HttpStatus.OK);
+    public ResponseEntity<TestData> onboardNew(@RequestBody Civilian newCiv) {
+        TestData addedCiv = civServ.onboardCivilian(newCiv);
+        return new ResponseEntity<TestData>(addedCiv, HttpStatus.OK);
     }
 }

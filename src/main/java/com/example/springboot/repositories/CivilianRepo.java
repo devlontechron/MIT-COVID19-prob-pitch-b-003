@@ -6,5 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CivilianRepo extends CrudRepository<Civilian, Integer> {
+    Civilian findById(String Id);
 
 }

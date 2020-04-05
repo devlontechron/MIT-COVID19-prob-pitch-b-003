@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TestDataRepo extends CrudRepository<TestData, Integer> {
 
+    TestData findByTestId(String id);
+
 }
