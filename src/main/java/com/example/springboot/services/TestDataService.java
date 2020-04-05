@@ -12,7 +12,7 @@ public class TestDataService {
     TestDataRepo testRepo;
 
     public TestData getTestDataById(String Id){
-        return testRepo.findByTestId(Id);
+        return testRepo.findById(Id);
     }
 
     public TestData createNewTest(){
